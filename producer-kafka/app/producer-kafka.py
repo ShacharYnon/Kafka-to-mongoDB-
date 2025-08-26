@@ -3,14 +3,16 @@ import json
 
 class ProducerKafka:
 
-    def __init__(self):
-        pass
+    def __init__(self ,server_address:str = 'localhost:9092'):
+        self.producer = KafkaProducer(bootstrap_servers = server_address)
+        
+
+    def publisher_kafka(self):
+
     
 
 
 if __name__ =="__main__":
-    
-
 
     topic = "topic-1"
 
